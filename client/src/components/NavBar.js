@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Menu, Header } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router'
+import Beers from './Beers'
 
 class NavBar extends Component {
   activeItem = (navPath) => {
@@ -14,6 +15,9 @@ class NavBar extends Component {
         <Menu pointing>
           <Link to='/'>
             <Menu.Item name='home' active={this.activeItem('/')} />
+          </Link>
+          <Link to='/Beers'>
+            <Menu.Item name='Beer' active={this.activeItem('/Beers')} />
           </Link>
           <Menu.Menu position='right'>
             <Link to='/'>
